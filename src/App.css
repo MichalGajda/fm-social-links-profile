@@ -42,14 +42,15 @@ img {
 #root {
   display: grid;
   grid-template-rows: 1fr auto;
-  height: 100vh;
+  min-height: 100vh;
+  min-height: 100dvh;
   background-color: var(--color-grey-dark);
 }
 
 main {
   align-self: center;
   justify-self: center;
-  width: 384px;
+  width: min(384px, 100%);
   padding: var(--spacing-big);
   color: var(--color-white);
   background-color: var(--color-grey-semi);
@@ -99,7 +100,9 @@ article {
   gap: var(--spacing-small);
 }
 
-.profile__links li {
+.profile__links a {
+  display: block;
+  width: 100%;
   padding: 1.2rem;
   border-radius: 0.8rem;
   background-color: var(--color-grey-light);
@@ -107,19 +110,15 @@ article {
     background-color 0.6s,
     color 0.5s;
   color: var(--color-white);
-}
-
-.profile__links li:hover,
-.profile__links li:focus-within {
-  color: var(--color-grey-dark);
-  background-color: var(--color-text);
-}
-
-.profile__links a {
-  color: inherit;
   text-decoration: none;
   font-size: var(--typography-text-small);
   font-weight: bold;
+}
+
+.profile__links a:hover,
+.profile__links a:focus-visible {
+  color: var(--color-grey-dark);
+  background-color: var(--color-text);
 }
 
 .attribution {
