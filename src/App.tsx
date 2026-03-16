@@ -23,27 +23,27 @@ function App() {
           <nav className="profile__links">
             <ul>
               <li>
-                <a href="#" rel="noopener noreferrer">
+                <a href="#" rel="noreferrer">
                   GitHub
                 </a>
               </li>
               <li>
-                <a href="#" rel="noopener noreferrer">
+                <a href="#" rel="noreferrer">
                   Frontend Mentor
                 </a>
               </li>
               <li>
-                <a href="#" rel="noopener noreferrer">
+                <a href="#" rel="noreferrer">
                   LinkedIn
                 </a>
               </li>
               <li>
-                <a href="#" rel="noopener noreferrer">
+                <a href="#" rel="noreferrer">
                   Twitter
                 </a>
               </li>
               <li>
-                <a href="#" rel="noopener noreferrer">
+                <a href="#" rel="noreferrer">
                   Instagram
                 </a>
               </li>
