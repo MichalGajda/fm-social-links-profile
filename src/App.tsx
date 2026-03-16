@@ -7,12 +7,11 @@ function App() {
       <main>
         <article className="profile">
           <header className="profile__header">
-            <div className="profile__image">
-              <img
-                src="/assets/images/avatar-jessica.jpeg"
-                alt="Jessica Randall"
-              />
-            </div>
+            <img
+              className="profile__image"
+              src="/assets/images/avatar-jessica.jpeg"
+              alt="Jessica Randall"
+            />
             <div className="profile__personal">
               <h1>Jessica Randall</h1>
               <p>London, United Kingdom</p>
@@ -24,19 +23,29 @@ function App() {
           <nav className="profile__links">
             <ul>
               <li>
-                <a href="#" rel="noopener noreferrer">GitHub</a>
+                <a href="#" rel="noopener noreferrer">
+                  GitHub
+                </a>
               </li>
               <li>
-                <a href="#" rel="noopener noreferrer">Frontend Mentor</a>
+                <a href="#" rel="noopener noreferrer">
+                  Frontend Mentor
+                </a>
               </li>
               <li>
-                <a href="#" rel="noopener noreferrer">LinkedIn</a>
+                <a href="#" rel="noopener noreferrer">
+                  LinkedIn
+                </a>
               </li>
               <li>
-                <a href="#" rel="noopener noreferrer">Twitter</a>
+                <a href="#" rel="noopener noreferrer">
+                  Twitter
+                </a>
               </li>
               <li>
-                <a href="#" rel="noopener noreferrer">Instagram</a>
+                <a href="#" rel="noopener noreferrer">
+                  Instagram
+                </a>
               </li>
             </ul>
           </nav>

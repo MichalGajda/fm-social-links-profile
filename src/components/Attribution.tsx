@@ -8,7 +8,7 @@ export default function Attribution() {
       >
         Frontend Mentor
       </a>
-      . Coded by{" "}
+      . Coded by&nbsp;
       <a href="#" rel="noreferer noopener">
         Michał Gajda
       </a>
