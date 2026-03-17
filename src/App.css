@@ -21,13 +21,19 @@
   --spacing-big: 4rem;
   --spacing-middle: 2.4rem;
   --spacing-small: 1.6rem;
+  --spacing-tiny: 1.2rem;
 
   --typography-text-big: 2.4rem;
   --typography-text-small: 1.4rem;
+  --typography-text-footer: 1.1rem;
+
+  --border-radius-big: 1.2rem;
+  --border-radius-mid: 0.8rem;
+  --border-radius-small: 0.4rem;
+  --border-radius-round: 50%;
 }
 
 html {
-  /* font-size: 62.5%; */
   font-size: clamp(0.5rem, 0.4rem + 0.2vw, 1.125rem);
   font-family: "Inter", sans-serif;
   line-height: 1.5;
@@ -59,7 +65,7 @@ main {
   padding: var(--spacing-big);
   color: var(--color-white);
   background-color: var(--color-grey-semi);
-  border-radius: 1.2rem;
+  border-radius: var(--border-radius-big);
   overflow: hidden;
   text-align: center;
 }
@@ -80,7 +86,7 @@ article {
 }
 
 .profile__image {
-  border-radius: 50%;
+  border-radius: var(--border-radius-round);
   width: 8.8rem;
 }
 
@@ -108,8 +114,8 @@ article {
 .profile__links a {
   display: block;
   width: 100%;
-  padding: 1.2rem;
-  border-radius: 0.8rem;
+  padding: var(--spacing-tiny);
+  border-radius: var(--border-radius-mid);
   background-color: var(--color-grey-light);
   transition:
     background-color 0.6s,
@@ -120,14 +126,6 @@ article {
   font-weight: bold;
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .profile__links a {
-    transition:
-      background-color 0.05s linear,
-      color 0.05s linear;
-  }
-}
-
 .profile__links a:hover,
 .profile__links a:focus-visible {
   color: var(--color-grey-dark);
@@ -135,7 +133,7 @@ article {
 }
 
 .attribution {
-  font-size: 1.1rem;
+  font-size: var(--typography-text-footer);
   color: var(--color-white);
   text-align: center;
 }
@@ -148,12 +146,23 @@ article {
 }
 .attribution a:hover {
   color: var(--link-hover);
-  text-decoration: underline; 
+  text-decoration: underline;
 }
 .attribution a:focus,
 .attribution a:focus-visible {
   color: var(--link-hover);
-  box-shadow: 0 0 0 3px var(--color-text);
-  border-radius: 4px;
+  box-shadow: 0 0 0 0.3rem var(--color-text);
+  border-radius: var(--border-radius-small);
   text-decoration: underline;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .profile__links a {
+    transition:
+      background-color 0.05s linear,
+      color 0.05s linear;
+  }
+  .attribution a {
+    transition: none;
+  }
 }
