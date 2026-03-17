@@ -5,7 +5,7 @@ const AVATAR_IMAGE_SRC = `${import.meta.env.BASE_URL}avatar-jessica.jpeg`;
 
 function App() {
   return (
-    <>
+    <div className="container">
       <main>
         <article className="profile">
           <header className="profile__header">
@@ -19,7 +19,7 @@ function App() {
               <p>London, United Kingdom</p>
             </div>
             <div className="profile__about">
-              <p>"Front-end developer and avid reader."</p>
+              <p><q>Front-end developer and avid reader.</q></p>
             </div>
           </header>
           <nav className="profile__links">
@@ -56,7 +56,7 @@ function App() {
       <footer>
         <Attribution />
       </footer>
-    </>
+    </div>
   );
 }
 
