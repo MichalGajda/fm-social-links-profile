@@ -15,6 +15,9 @@
   --color-white: hsl(0, 0%, 100%);
   --color-text: hsl(75, 94%, 57%);
 
+  --link-static: hsl(228, 60%, 35%);
+  --link-hover: hsl(228, 45%, 44%);
+
   --spacing-big: 4rem;
   --spacing-middle: 2.4rem;
   --spacing-small: 1.6rem;
@@ -24,7 +27,8 @@
 }
 
 html {
-  font-size: 62.5%;
+  /* font-size: 62.5%; */
+  font-size: clamp(0.5rem, 0.4rem + 0.2vw, 1.125rem);
   font-family: "Inter", sans-serif;
   line-height: 1.5;
 }
@@ -35,11 +39,12 @@ body {
 
 img {
   display: block;
-  width: 100%;
+  max-width: 100%;
+  height: auto;
 }
 
 /* social links profile */
-#root {
+.container {
   display: grid;
   grid-template-rows: 1fr auto;
   min-height: 100vh;
@@ -50,7 +55,7 @@ img {
 main {
   align-self: center;
   justify-self: center;
-  width: min(384px, 100%);
+  width: min(38.4rem, 100%);
   padding: var(--spacing-big);
   color: var(--color-white);
   background-color: var(--color-grey-semi);
@@ -115,6 +120,14 @@ article {
   font-weight: bold;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .profile__links a {
+    transition:
+      background-color 0.05s linear,
+      color 0.05s linear;
+  }
+}
+
 .profile__links a:hover,
 .profile__links a:focus-visible {
   color: var(--color-grey-dark);
@@ -127,5 +140,20 @@ article {
   text-align: center;
 }
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  color: var(--link-static);
+  transition:
+    color 150ms ease,
+    box-shadow 150ms ease;
+  outline: none;
+}
+.attribution a:hover {
+  color: var(--link-hover);
+  text-decoration: underline; 
+}
+.attribution a:focus,
+.attribution a:focus-visible {
+  color: var(--link-hover);
+  box-shadow: 0 0 0 3px var(--color-text);
+  border-radius: 4px;
+  text-decoration: underline;
 }
