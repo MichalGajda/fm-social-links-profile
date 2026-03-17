@@ -150,6 +150,7 @@ article {
   color: var(--link-hover);
   text-decoration: underline; 
 }
+.attribution a:focus,
 .attribution a:focus-visible {
   color: var(--link-hover);
   box-shadow: 0 0 0 3px var(--color-text);
